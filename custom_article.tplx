@@ -1,0 +1,30 @@
+% Tell the templating engine what output template we want to use.
+((* extends 'article.tplx' *))
+
+% Template will setup imports, etc. as normal unless we override these sections.
+
+% Leave title blank
+((* block title -*))
+((*- endblock title *))
+
+% Leave author blank
+((* block author -*))
+((* endblock author *))
+
+% Etc.
+((* block maketitle *))
+((* endblock maketitle *))
+
+% Don't show "input" prompt
+((*- block in_prompt -*))
+((*- endblock in_prompt -*))
+
+% Hide input cells
+((*- block input -*))
+((*- endblock input -*))
+
+% Don't show "output" prompt
+((*- block output_prompt -*))
+((*- endblock output_prompt -*))
+
+% Let template render output cells as usual
